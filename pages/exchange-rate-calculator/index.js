@@ -51,7 +51,7 @@ export default function ExchangeRateCalculator() {
     }
 
     function getExchangeRateByDate(dateMoment, locale){
-        let _dateMoment = dateMoment
+        let _dateMoment = dateMoment.clone().subtract(1, "day")
         let exchangeRate = null
 
         for (let index = 0; index < 100; index++) {
@@ -115,7 +115,7 @@ export default function ExchangeRateCalculator() {
             { value: row[1].value },
             { value: row[2].value },
             { value: exchangeRate1?.rate_2 },
-            { value: exchangeRate2?.rate_3 },
+            { value: exchangeRate2?.rate_2 },
             { value: exchangeRateDate1 },
             { value: exchangeRateDate2 },
         ];

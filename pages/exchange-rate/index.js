@@ -14,7 +14,7 @@ export default function ExchangeRate() {
     const inputFileRef = useRef(null);
     const [loading, setLoading] = useState(false);
     const [locales, setLocales] = useState([]);
-    const [locale, setLocale] = useState("US");
+    const [locale, setLocale] = useState("USD");
     const [items, setItems] = useState([]);
 
     const columns = [
@@ -148,7 +148,7 @@ export default function ExchangeRate() {
             {/* <pre>{JSON.stringify(locales, null, 2)}</pre> */}
             <Tabs
                 centered
-                defaultActiveKey="US"
+                defaultActiveKey="USD"
                 onChange={onChangeTab}
                 items={locales.map((_, i) => {
                     return {

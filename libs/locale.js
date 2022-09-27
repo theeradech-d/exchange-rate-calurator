@@ -1,7 +1,7 @@
 const Locale = [
     {
         label: "สหรัฐอเมริกา",
-        value: "US",
+        value: "USD",
     },
     {
         label: "สหราชอาณาจักร",
@@ -17,7 +17,7 @@ const Locale = [
     },
     {
         label: "ญี่ปุ่น (ต่อ 100 เยน)",
-        value: "JP",
+        value: "JPY",
     },
     {
         label: "ฮ่องกง",
