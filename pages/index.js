@@ -13,8 +13,7 @@ export default function Home() {
 
     return (
         <div>
-            {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
-            <Spreadsheet data={data} onChange={onChangeTable} />
+            Exchange Rate Calurator
         </div>
     );
 }
