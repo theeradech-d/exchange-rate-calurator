@@ -10,7 +10,7 @@ export default function Layout({ children, appConfig, menus }) {
                     name="viewport"
                     content="width=device-width, initial-scale=1"
                 />
-                <title>Thai Merit</title>
+                <title>Exchange Rate Tool</title>
             </Head>
             <Navbar />
             <main>{children}</main>
