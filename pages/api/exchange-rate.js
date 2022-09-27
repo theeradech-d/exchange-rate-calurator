@@ -16,6 +16,17 @@ export const config = {
 };
 
 export default async function handler(req, res) {
+    if (req.method == "DELETE") {
+        const locale = req.query.locale;
+
+        await knex("exchange_rates").where("locale", locale).delete()
+
+        res.status(200).json({
+            locale
+        });
+
+        return
+    }else
     if (req.method === "POST") {
         const locale = req.query.locale;
         const files = await new Promise((resolve, reject) => {

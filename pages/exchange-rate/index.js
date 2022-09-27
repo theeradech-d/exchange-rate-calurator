@@ -91,6 +91,30 @@ export default function ExchangeRate() {
         inputFileRef.current.click();
     };
 
+    const onClickClearBtn = () => {
+        Modal.confirm({
+            title: "ยืนยันการลบ",
+            async onOk() {
+                console.log("OK");
+
+                try {
+                    setLoading(true);
+
+                    await axios.delete("/api/exchange-rate", {
+                        params: {
+                            locale,
+                        },
+                    });
+                } catch (error) {}
+
+                getItems();
+            },
+            onCancel() {
+                console.log("Cancel");
+            },
+        });
+    };
+
     const onFileChange = async (e) => {
         setLoading(true);
 
@@ -164,8 +188,15 @@ export default function ExchangeRate() {
                                             <Button
                                                 type="primary"
                                                 onClick={onBtnClick}
+                                                className="mx-2"
                                             >
                                                 Import
+                                            </Button>
+                                            <Button
+                                                type="danger"
+                                                onClick={onClickClearBtn}
+                                            >
+                                                Clear
                                             </Button>
                                         </div>
                                         <Table
