@@ -1,2 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import '~antd/dist/antd'; 
+
+body { padding-top: 60px; }
+@media screen and (max-width: 768px) {
+    body { padding-top: 0px; }
+}
